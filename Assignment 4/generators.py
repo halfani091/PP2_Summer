@@ -1,10 +1,4 @@
-# ============================================================
-# Practice 4 — Python Iterators and Generators
-# ============================================================
 
-# ----------------------------------------------------------
-# Task 1: Generator that yields squares of numbers up to N
-# ----------------------------------------------------------
 print("=== Task 1: Squares up to N ===")
 
 def squares_up_to(n):
@@ -18,9 +12,7 @@ for sq in squares_up_to(N):
     print(sq, end=" ")
 print()
 
-# ----------------------------------------------------------
-# Task 2: Even numbers between 0 and n (comma separated)
-# ----------------------------------------------------------
+
 print("\n=== Task 2: Even numbers 0..n (comma separated) ===")
 
 def even_numbers(n):
@@ -32,9 +24,7 @@ n = int(input("Enter n: "))
 result = ",".join(str(x) for x in even_numbers(n))
 print(result)
 
-# ----------------------------------------------------------
-# Task 3: Numbers divisible by 3 AND 4 between 0 and n
-# ----------------------------------------------------------
+
 print("\n=== Task 3: Divisible by 3 and 4 in range 0..n ===")
 
 def divisible_by_3_and_4(n):
@@ -47,9 +37,7 @@ n2 = 100
 print(f"Divisible by 3 and 4 (0 to {n2}):")
 print(list(divisible_by_3_and_4(n2)))
 
-# ----------------------------------------------------------
-# Task 4: Generator 'squares' from a to b, tested with for loop
-# ----------------------------------------------------------
+
 print("\n=== Task 4: Squares from a to b ===")
 
 def squares(a, b):
@@ -62,9 +50,7 @@ print(f"Squares from {a} to {b}:")
 for val in squares(a, b):
     print(val)
 
-# ----------------------------------------------------------
-# Task 5: Generator counting down from n to 0
-# ----------------------------------------------------------
+
 print("\n=== Task 5: Countdown from n to 0 ===")
 
 def countdown(n):
