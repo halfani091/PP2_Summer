@@ -198,10 +198,6 @@ def delete_contact():
     finally:
         conn.close()
 
-
-
-
-
 def insert_from_csv(filepath: str):
 
     conn = get_connection()
@@ -501,7 +497,6 @@ def delete_contact_proc():
         conn.close()
 
 
-
 MENU = """
 ==== PhoneBook ====
 1. Import contacts from CSV
@@ -525,14 +520,12 @@ def main():
         print(MENU)
         choice = input("Choose an option: ").strip()
 
-        
         if choice == "1":
-           
-           
             path = input("CSV file path (default contacts.csv): ").strip() or "contacts.csv"
             insert_from_csv(path)
-       
-       
+
+
+
         elif choice == "2":
             insert_from_console()
         
@@ -542,8 +535,14 @@ def main():
         
         
         
+        
+        
+        
+        
         elif choice == "4":
             update_contact()
+        
+        
         
         
         
@@ -551,8 +550,12 @@ def main():
             delete_contact()
         
         
+        
+        
+        
         elif choice == "6":
             show_contacts()
+        
         
         
         
@@ -566,6 +569,7 @@ def main():
         
         
         
+        
         elif choice == "9":
             upsert_contact_proc()
         
@@ -575,12 +579,8 @@ def main():
             insert_many_proc()
         
         
-        
         elif choice == "11":
             delete_contact_proc()
-        
-        
-        
         
         
         
