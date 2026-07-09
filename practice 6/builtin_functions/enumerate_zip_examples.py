@@ -22,7 +22,7 @@ names  = ["Alice", "Bob", "Carol", "Dave"]
 scores = [92, 78, 85, 61]
 grades = ["A", "C", "B", "D"]
 
-print("\n=== zip() ===")
+
 for name, score in zip(names, scores):
     print(f"  {name}: {score}")
 
@@ -39,11 +39,11 @@ for i, (name, score) in enumerate(zip(names, scores), start=1):
 nums, letters = zip(*[(1, "a"), (2, "b"), (3, "c")])
 print(f"\nUnzipped: nums={list(nums)}, letters={list(letters)}")
 
-print("\nzip_longest:")
+
 for pair in zip_longest([1, 2], ["a", "b", "c", "d"]):
     print(f"  {pair}")
 
-print("\n=== sorted() ===")
+
 nums2 = [5, 2, 9, 1, 7, 3]
 print(f"Ascending:  {sorted(nums2)}")
 print(f"Descending: {sorted(nums2, reverse=True)}")

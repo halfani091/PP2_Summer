@@ -27,7 +27,7 @@ print("Appended 2 lines to 'sample.txt'.")
 
 exclusive_file = "exclusive.txt"
 if os.path.exists(exclusive_file):
-    os.remove(exclusive_file)
+    os.remove(exclusive_file)   
 
 with open(exclusive_file, "x", encoding="utf-8") as f:
     f.write("This file was created exclusively with mode 'x'.\n")

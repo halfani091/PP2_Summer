@@ -52,6 +52,7 @@ def insert_from_csv(filepath: str):
 
 
 def insert_from_console():
+    """Ask the user for contact details and insert a single row."""
     first_name = input("First name: ").strip()
     last_name = input("Last name (optional): ").strip() or None
     phone = input("Phone: ").strip()
@@ -134,6 +135,7 @@ def search_contacts():
 
 
 def update_contact():
+    """Update first name or phone for a contact identified by current phone."""
     current_phone = input("Phone of the contact to update: ").strip()
 
     field = input("Update (1) first name or (2) phone? Enter 1 or 2: ").strip()
@@ -170,6 +172,7 @@ def update_contact():
 
 
 def delete_contact():
+    """Delete a contact by username (first name) or phone number."""
     key = input("Delete by (1) first name or (2) phone? Enter 1 or 2: ").strip()
     if key == "1":
         value = input("First name to delete: ").strip()
@@ -229,6 +232,7 @@ def insert_from_csv(filepath: str):
 
 
 def insert_from_console():
+    """Ask the user for contact details and insert a single row."""
     first_name = input("First name: ").strip()
     last_name = input("Last name (optional): ").strip() or None
     phone = input("Phone: ").strip()
@@ -311,6 +315,7 @@ def search_contacts():
 
 
 def update_contact():
+    """Update first name or phone for a contact identified by current phone."""
     current_phone = input("Phone of the contact to update: ").strip()
 
     field = input("Update (1) first name or (2) phone? Enter 1 or 2: ").strip()
@@ -347,6 +352,7 @@ def update_contact():
 
 
 def delete_contact():
+    """Delete a contact by username (first name) or phone number."""
     key = input("Delete by (1) first name or (2) phone? Enter 1 or 2: ").strip()
     if key == "1":
         value = input("First name to delete: ").strip()
@@ -376,6 +382,7 @@ def delete_contact():
 
 
 def search_by_pattern_func():
+    """Вызывает SQL-функцию get_contacts_by_pattern (часть имени/фамилии/телефона)."""
     pattern = input("Введите фрагмент имени/фамилии/телефона: ").strip()
     conn = get_connection()
     try:
@@ -395,6 +402,7 @@ def search_by_pattern_func():
 
 
 def show_page_func():
+    """Вызывает SQL-функцию get_contacts_paginated (пагинация)."""
     try:
         limit = int(input("Сколько записей на странице (limit): ").strip())
         offset = int(input("Сколько записей пропустить (offset): ").strip())
@@ -420,6 +428,7 @@ def show_page_func():
 
 
 def upsert_contact_proc():
+    """Вызывает процедуру upsert_contact: добавить или обновить контакт по телефону."""
     first_name = input("First name: ").strip()
     last_name = input("Last name (optional): ").strip() or None
     phone = input("Phone: ").strip()

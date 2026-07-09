@@ -1,0 +1,5 @@
+Line 1: Hello, World!
+Line 2: Python File Handling
+Line 3: Writing to files is easy!
+Line 4: Appended line!
+Line 5: One more appended line!
